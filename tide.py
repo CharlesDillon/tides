@@ -26,18 +26,19 @@ tidejson = """
 # { "predictions" : [ {"t":"2019-07-03 00:44", "v":"9.060", "type":"H"},{"t":"2019-07-03 08:09", "v":"-1.609", "type":"L"},{"t":"2019-07-03 14:57", "v":"7.295", "type":"H"},{"t":"2019-07-03 20:05", "v":"3.062", "type":"L"},{"t":"2019-07-04 01:34", "v":"9.069", "type":"H"},{"t":"2019-07-04 08:53", "v":"-1.669", "type":"L"},{"t":"2019-07-04 15:42", "v":"7.494", "type":"H"},{"t":"2019-07-04 20:56", "v":"2.911", "type":"L"} ]}
 # """ #this be with interval=hilo
 
-#pst = "9:45" # Time the boat should be ready to leave the doc.  Keep in mind, 9:30 should be a reasonable time to start a practice
-pst = "17:45" # Time the boat should be ready to leave the doc.  Keep in mind, 9:30 should be a reasonable time to start a practice
-#eop = "12:00"   #end of practice, time for lunch
-eop = "20:00"   #end of practice, time for lunch
+pst = "8:45" # Time the boat should be ready to leave the doc.  Keep in mind, 9:30 should be a reasonable time to start a practice
+#pst = "18:15" # Time the boat should be ready to leave the doc.  Keep in mind, 9:30 should be a reasonable time to start a practice
+eop = "11:00"   #end of practice, time for lunch
+#eop = "20:00"   #end of practice, time for lunch
 practiceStart = datetime.strptime(pst, '%H:%M').time()
 practiceEnd = datetime.strptime(eop, '%H:%M').time()
 
 #ssd = "2/17/2019"
-ssd = "3/20/2019"
+ssd = "6/23/2019"
 sadSadDay = "11/7/2019"
 seasonStart = datetime.strptime(ssd,'%m/%d/%Y')
 seasonEnd = datetime.strptime(sadSadDay,'%m/%d/%Y')
+
 minimumPracticeHeight = 1.5
 aWeek = timedelta(days=7)
 currentDay = seasonStart
